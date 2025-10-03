@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>LABORATORY TASK # 2 &amp; 3 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Laboratory2_3';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="LABORATOR TASK # 4" href="Laboratory4.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">LABORATORY TASK # 2 &amp; 3</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Laboratory4.html">LABORATOR TASK # 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Laboratory5.html">Laboratory Task # 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Laboratory6.html">LABORATORY TASK # 6</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLaboratory2_3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Laboratory2_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>LABORATORY TASK # 2 & 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">LABORATORY TASK # 2 &amp; 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#key-teakeaways">KEY TEAKEAWAYS</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>Name:</strong> Airll H. Sanchez</p>
+<p><strong>Date:</strong> September 17, 2025</p>
+<section id="laboratory-task-2-3">
+<h1>LABORATORY TASK # 2 &amp; 3<a class="headerlink" href="#laboratory-task-2-3" title="Link to this heading">#</a></h1>
+<p><img alt="{B3A5596D-3E2D-456A-92FF-8D379267A197}.png" src="attachment:67624095-4599-4b73-899a-70b5171ef0f0.png" /></p>
+<p><img alt="{D306689A-DC46-4D86-BA6F-AEE99DBE5325}.png" src="attachment:117ba746-cc28-4895-93ed-0424f8b554ee.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1 Define Activation Functions &amp; their derivatives</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">relu</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ReLU activation function: max(0, z)&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">relu_derivative</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Derivative of ReLU: 1 if z &gt; 0, 0 otherwise&quot;&quot;&quot;</span>
+    <span class="c1"># Create a copy of z and set values based on the condition</span>
+    <span class="n">dz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">z</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2 Initialize Parameters and Inputs from Laboratory Task 2 ---</span>
+
+<span class="c1"># Input vector (x) and True output (y)</span>
+<span class="c1"># x = np.array([1, 0, 1])</span>
+<span class="c1"># y = np.array([1])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]])</span> <span class="c1"># Input is a 3x1 column vector</span>
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])</span>      <span class="c1"># True output is a 1x1 vector</span>
+
+<span class="c1"># Hidden unit weights (W1: 3x2 matrix)</span>
+<span class="n">W1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Output unit weights (W2: 2x1 matrix)</span>
+<span class="c1"># Note: The problem shows W21 and W22 in a column, but for matrix multiplication</span>
+<span class="c1"># from hidden layer (2x1) to output (1x1), W2 should be 1x2 or a 2x1 vector.</span>
+<span class="c1"># Assuming hidden layer has 2 units, and output has 1 unit.</span>
+<span class="c1"># The shape of W2 should be 2x1 if the hidden activation is 2x1.</span>
+<span class="n">W2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.3</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Biases (Thetas)</span>
+<span class="c1"># Theta_1 and Theta_2 are for the two hidden units, Theta_3 for the output unit.</span>
+<span class="n">theta_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">]])</span>  <span class="c1"># Biases for the 2 hidden units (2x1)</span>
+<span class="n">theta_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">]])</span>          <span class="c1"># Bias for the 1 output unit (1x1)</span>
+
+<span class="c1"># Learning rate</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial W1:</span><span class="se">\n</span><span class="si">{</span><span class="n">W1</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial W2:</span><span class="se">\n</span><span class="si">{</span><span class="n">W2</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial W1:
+[[ 0.2 -0.3]
+ [ 0.4  0.1]
+ [-0.5  0.2]]
+
+Initial W2:
+[[-0.3]
+ [-0.2]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input vector (x) and True output (y)</span>
+<span class="c1"># x = np.array([1, 0, 1])</span>
+<span class="c1"># y = np.array([1])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]])</span> <span class="c1"># Input is a 3x1 column vector</span>
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])</span>      <span class="c1"># True output is a 1x1 vector</span>
+
+<span class="c1"># Hidden unit weights (W1: 3x2 matrix)</span>
+<span class="n">W1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Output unit weights (W2: 2x1 matrix)</span>
+<span class="c1"># Note: The problem shows W21 and W22 in a column, but for matrix multiplication</span>
+<span class="c1"># from hidden layer (2x1) to output (1x1), W2 should be 1x2 or a 2x1 vector.</span>
+<span class="c1"># Assuming hidden layer has 2 units, and output has 1 unit.</span>
+<span class="c1"># The shape of W2 should be 2x1 if the hidden activation is 2x1.</span>
+<span class="n">W2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.3</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Biases (Thetas)</span>
+<span class="c1"># Theta_1 and Theta_2 are for the two hidden units, Theta_3 for the output unit.</span>
+<span class="n">theta_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">]])</span>  <span class="c1"># Biases for the 2 hidden units (2x1)</span>
+<span class="n">theta_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">]])</span>          <span class="c1"># Bias for the 1 output unit (1x1)</span>
+
+<span class="c1"># Learning rate</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial W1:</span><span class="se">\n</span><span class="si">{</span><span class="n">W1</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial W2:</span><span class="se">\n</span><span class="si">{</span><span class="n">W2</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial W1:
+[[ 0.2 -0.3]
+ [ 0.4  0.1]
+ [-0.5  0.2]]
+
+Initial W2:
+[[-0.3]
+ [-0.2]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#3 Forward Propagation </span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- FORWARD PASS ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 1: Calculate the weighted input for the hidden layer (Z1)</span>
+<span class="c1"># Z1 = W1^T * x + theta_1. Since W1 is 3x2 and x is 3x1, we need to transpose W1.Alternatively, use W1 (3x2) and transpose x (1x3), then transpose the result. A cleaner way is Z1 = x^T @ W1 + theta_1^T, then transpose Z1 for a 2x1 vector. Let&#39;s stick to the convention: Z1 = W1_T @ x + b1. Here, W1 is (Input_Size x Hidden_Size). We assume x is a 3x1 vector. Z1 will be (Hidden_Size x 1) = (2x1)</span>
+<span class="n">Z1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">theta_1</span>
+<span class="c1"># Z1 = [[0.2 * 1 + 0.4 * 0 + (-0.5) * 1 - 0.4], [-0.3 * 1 + 0.1 * 0 + 0.2 * 1 + 0.2]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Z1 (Hidden Weighted Input):</span><span class="se">\n</span><span class="si">{</span><span class="n">Z1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected Z1: [[-0.7], [0.1]]</span>
+
+<span class="c1"># Step 2: Apply ReLU activation to get hidden layer output (A1)</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">Z1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A1 (Hidden Activation):</span><span class="se">\n</span><span class="si">{</span><span class="n">A1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected A1: [[0.0], [0.1]]</span>
+
+<span class="c1"># Step 3: Calculate the weighted input for the output layer (Z2)</span>
+<span class="c1"># Z2 = W2^T * A1 + theta_2. W2 is 2x1, A1 is 2x1. Z2 will be (Output_Size x 1) = (1x1)</span>
+<span class="n">Z2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W2</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">A1</span><span class="p">)</span> <span class="o">+</span> <span class="n">theta_2</span>
+<span class="c1"># Z2 = [[-0.3 * 0.0 + (-0.2) * 0.1 + 0.1]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Z2 (Output Weighted Input):</span><span class="se">\n</span><span class="si">{</span><span class="n">Z2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected Z2: [[0.08]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- FORWARD PASS ---
+Z1 (Hidden Weighted Input):
+[[-0.7]
+ [ 0.1]]
+A1 (Hidden Activation):
+[[0. ]
+ [0.1]]
+Z2 (Output Weighted Input):
+[[0.08]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 4 Apply ReLU activation to get final prediction (y_pred)</span>
+<span class="c1"># For the output layer, an identity function is sometimes used, but the prompt specifies &#39;relu&#39; as *the* activation function.</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">Z2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y_pred (Final Prediction):</span><span class="se">\n</span><span class="si">{</span><span class="n">y_pred</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected y_pred: [[0.08]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y_pred (Final Prediction):
+[[0.08]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Step 5: Calculate the Loss (Mean Squared Error)</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y_pred</span> <span class="o">-</span> <span class="n">y_true</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="c1"># MSE simplified for single output</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loss (E):</span><span class="se">\n</span><span class="si">{</span><span class="n">loss</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected Loss: (0.08 - 1)^2 / 2 = 0.8464 / 2 = 0.4232</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loss (E):
+0.4232
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#4. Backward Propagation (Gradient Calculation)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- BACKWARD PASS (Gradient Calculation) ---&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- BACKWARD PASS (Gradient Calculation) ---
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Gradient of Loss w.r.t. Predicted Output (dE/dy_pred)</span>
+<span class="n">dE_dy_pred</span> <span class="o">=</span> <span class="n">y_pred</span> <span class="o">-</span> <span class="n">y_true</span> <span class="c1"># d/dy_pred [1/2 * (y_pred - y_true)^2]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dy_pred:</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dy_pred</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[0.08 - 1]] = [[-0.92]] </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dy_pred:
+[[-0.92]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Gradient of Predicted Output w.r.t. Z2 (dy_pred/dZ2)</span>
+<span class="n">dy_pred_dZ2</span> <span class="o">=</span> <span class="n">relu_derivative</span><span class="p">(</span><span class="n">Z2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dy_pred_dZ2:</span><span class="se">\n</span><span class="si">{</span><span class="n">dy_pred_dZ2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[1]] since Z2 = 0.08 &gt; 0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dy_pred_dZ2:
+[[1]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Gradient of Loss w.r.t. Z2 (dE/dZ2) -&gt; The &#39;delta&#39; for output layer</span>
+<span class="c1"># Chain rule: dE/dZ2 = (dE/dy_pred) * (dy_pred/dZ2)</span>
+<span class="n">dE_dZ2</span> <span class="o">=</span> <span class="n">dE_dy_pred</span> <span class="o">*</span> <span class="n">dy_pred_dZ2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dZ2 (Output Delta):</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dZ2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[-0.92]] * [[1]] = [[-0.92]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dZ2 (Output Delta):
+[[-0.92]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Gradient of Loss w.r.t. W2 (dE/dW2)</span>
+<span class="c1"># dE/dW2 = dE/dZ2 * A1^T</span>
+<span class="n">dE_dW2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="n">dE_dZ2</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="c1"># A1 is 2x1, dE_dZ2.T is 1x1. Result is 2x1.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dW2:</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dW2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[0.0], [0.1]] * [[-0.92]] = [[0.0], [-0.092]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dW2:
+[[ 0.   ]
+ [-0.092]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Gradient of Loss w.r.t. Bias Theta_2 (dE/d_theta_2)</span>
+<span class="c1"># dE/d_theta_2 = dE/dZ2</span>
+<span class="n">dE_dtheta_2</span> <span class="o">=</span> <span class="n">dE_dZ2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dtheta_2:</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dtheta_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[-0.92]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dtheta_2:
+[[-0.92]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#B. Hidden Layer Gradients (Layer 1)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Gradient of Loss w.r.t. Hidden Activation (dE/dA1)</span>
+<span class="c1"># Chain rule: dE/dA1 = W2 * dE/dZ2. W2 is 2x1, dE/dZ2 is 1x1. No, W2 is 2x1, dE/dZ2 is 1x1</span>
+<span class="c1"># dE/dA1 = W2 * dE/dZ2.T, W2 is 2x1, dE/dZ2.T is 1x1. Result 2x1.</span>
+<span class="n">dE_dA1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W2</span><span class="p">,</span> <span class="n">dE_dZ2</span><span class="p">)</span> <span class="c1"># W2 (2x1) * dE_dZ2 (1x1). Result is 2x1.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dA1:</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dA1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[-0.3], [-0.2]] * [-0.92] = [[0.276], [0.184]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dA1:
+[[0.276]
+ [0.184]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Gradient of Hidden Activation w.r.t. Z1 (dA1/dZ1)</span>
+<span class="n">dA1_dZ1</span> <span class="o">=</span> <span class="n">relu_derivative</span><span class="p">(</span><span class="n">Z1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dA1_dZ1:</span><span class="se">\n</span><span class="si">{</span><span class="n">dA1_dZ1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[0], [1]] since Z1 = [[-0.7], [0.1]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dA1_dZ1:
+[[0]
+ [1]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8. Gradient of Loss w.r.t. Z1 (dE/dZ1) -&gt; The &#39;delta&#39; for hidden layer</span>
+<span class="c1"># Chain rule: dE/dZ1 = (dE/dA1) * (dA1/dZ1) (element-wise multiplication)</span>
+<span class="n">dE_dZ1</span> <span class="o">=</span> <span class="n">dE_dA1</span> <span class="o">*</span> <span class="n">dA1_dZ1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dZ1 (Hidden Delta):</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dZ1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[0.276 * 0], [0.184 * 1]] = [[0.0], [0.184]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dZ1 (Hidden Delta):
+[[0.   ]
+ [0.184]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9. Gradient of Loss w.r.t. W1 (dE/dW1)</span>
+<span class="c1"># dE/dW1 = x * dE/dZ1^T. x is 3x1, dE_dZ1.T is 1x2. Result is 3x2.</span>
+<span class="n">dE_dW1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dE_dZ1</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dW1:</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dW1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected:</span>
+<span class="c1"># [1] * [0.0, 0.184] = [0.0, 0.184]</span>
+<span class="c1"># [0] * [0.0, 0.184] = [0.0, 0.0]</span>
+<span class="c1"># [1] * [0.0, 0.184] = [0.0, 0.184]</span>
+<span class="c1"># Result: [[0.0, 0.184], [0.0, 0.0], [0.0, 0.184]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dW1:
+[[0.    0.184]
+ [0.    0.   ]
+ [0.    0.184]]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10. Gradient of Loss w.r.t. Bias Theta_1 (dE/d_theta_1)</span>
+<span class="c1"># dE/d_theta_1 = dE/dZ1</span>
+<span class="n">dE_dtheta_1</span> <span class="o">=</span> <span class="n">dE_dZ1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dE_dtheta_1:</span><span class="se">\n</span><span class="si">{</span><span class="n">dE_dtheta_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Expected: [[0.0], [0.184]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dE_dtheta_1:
+[[0.   ]
+ [0.184]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Update Parameters </span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- PARAMETER UPDATE ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># W2 Update</span>
+<span class="n">W2_new</span> <span class="o">=</span> <span class="n">W2</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dE_dW2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;W2_new:</span><span class="se">\n</span><span class="si">{</span><span class="n">W2_new</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># W2[1] = -0.2 - 0.001 * (-0.092) = -0.2 + 0.000092 = -0.199908</span>
+
+<span class="c1"># Theta_2 Update</span>
+<span class="n">theta_2_new</span> <span class="o">=</span> <span class="n">theta_2</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dE_dtheta_2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;theta_2_new:</span><span class="se">\n</span><span class="si">{</span><span class="n">theta_2_new</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># theta_2 = 0.1 - 0.001 * (-0.92) = 0.1 + 0.00092 = 0.10092</span>
+
+<span class="c1"># W1 Update</span>
+<span class="n">W1_new</span> <span class="o">=</span> <span class="n">W1</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dE_dW1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;W1_new:</span><span class="se">\n</span><span class="si">{</span><span class="n">W1_new</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># W1[0, 1] = -0.3 - 0.001 * 0.184 = -0.3 - 0.000184 = -0.300184</span>
+<span class="c1"># W1[2, 1] = 0.2 - 0.001 * 0.184 = 0.2 - 0.000184 = 0.199816</span>
+
+<span class="c1"># Theta_1 Update</span>
+<span class="n">theta_1_new</span> <span class="o">=</span> <span class="n">theta_1</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dE_dtheta_1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;theta_1_new:</span><span class="se">\n</span><span class="si">{</span><span class="n">theta_1_new</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># theta_1[1] = 0.2 - 0.001 * 0.184 = 0.2 - 0.000184 = 0.199816</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- PARAMETER UPDATE ---
+W2_new:
+[[-0.3     ]
+ [-0.199908]]
+theta_2_new:
+[[0.10092]]
+W1_new:
+[[ 0.2      -0.300184]
+ [ 0.4       0.1     ]
+ [-0.5       0.199816]]
+theta_1_new:
+[[-0.4     ]
+ [ 0.199816]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="key-teakeaways">
+<h1>KEY TEAKEAWAYS<a class="headerlink" href="#key-teakeaways" title="Link to this heading">#</a></h1>
+<p>Zero-Out Effect of ReLU: Since the first hidden unit’s weighted input, Z
+1
+​
+[0], was −0.7 (negative), its activation A
+1
+​
+[0] became 0 due to the ReLU function.</p>
+<p>Backpropagation Stop: Because A
+1
+​
+[0] is 0, the weight W
+2
+​
+[0] (the first output weight) is effectively ignored in the forward pass. More critically, the gradient for the first hidden unit’s weights (W
+1
+​
+column 1) is zero due to the derivative of ReLU being zero for negative Z
+1
+​
+. This means none of the weights feeding into the first hidden unit will be updated in this step.</p>
+<p>Weight Updates: Only the weights and biases associated with the second hidden unit (which had a positive Z
+1
+​
+) and the output layer are updated.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sairria"
+        },
+        kernelOptions: {
+            name: "sairria",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sairria'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown-notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Laboratory4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">LABORATOR TASK # 4</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">LABORATORY TASK # 2 &amp; 3</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#key-teakeaways">KEY TEAKEAWAYS</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
