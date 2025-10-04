@@ -1,13 +1,24 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
+
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-- file: Laboratory2_3
-- file: Laboratory4
-- file: Laboratory5
-- file: Laboratory6
+  - file: Laboratories  
+    title: Laboratories
+    sections:
+      - file: Laboratory2_3
+      - file: Laboratory4
+      - file: Laboratory5
+      - file: Laboratory6
+
+  - file: Project       
+    title: Project
+    sections:
+      - file: Autoencoder_MiniCaseStudy
+
+  - file: Exercises      
+    title: Exercises
+    sections:
+      - file: DS413SanchezAiryllDS4A_Assignment1
+      - file: markdown
+      - file: markdown-notebooks
+      - file: notebooks
