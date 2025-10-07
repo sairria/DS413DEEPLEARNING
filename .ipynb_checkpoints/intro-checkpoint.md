@@ -1,11 +1,22 @@
-# Welcome to your Jupyter Book
+# DS413 Deep Learning Portfolio
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+**Name:** Airyll H. Sanchez  
+**Course:** DS413 - Deep Learning  
+**Instructor:** Mr. Jhun Brian Andam  
+**Semester:** 1st Semester, A.Y. 2025  
 
-Check out the content pages bundled with this sample book to see more.
+---
+
+ **Deep Learning Portfolio**
+A compilation of **laboratory activities, exercises, and project work** for the course. It is designed both as a record of my learning journey and as a showcase of my skills in deep learning.  
+
+📂 **Contents of this portfolio:**  
+- 🧪 **Laboratories** 
+- 📘 **Exercises**
+- 🚀 **Project**
+
+---
+
 
 ```{tableofcontents}
-```
+
