@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Laboratory Task #2 &amp; 3 &#8212; DS413 Deep Learning</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Laboratory2_3';</script>
+    <link rel="icon" href="_static/logo.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Laboratory Task # 4" href="Laboratory4.html" />
+    <link rel="prev" title="Laboratories" href="Laboratories.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="DS413 Deep Learning - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="DS413 Deep Learning - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    DS413 Deep Learning Portfolio
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Laboratories.html">Laboratories</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Laboratory Task #2 &amp; 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Laboratory4.html">Laboratory Task # 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Laboratory5.html">Laboratory Task # 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Laboratory6.html">Laboratory Task # 6</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Project.html">Project</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Autoencoder_MiniCaseStudy.html">Autoencoder Mini Case Study</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Exercises.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="DS413SanchezAiryllDS4A_Assignment1.html">DS413 Assignment 1: Sanchez Airyll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/sairria/DS413DEEPLEARNING.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/sairria/DS413DEEPLEARNING.git/issues/new?title=Issue%20on%20page%20%2FLaboratory2_3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Laboratory2_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Laboratory Task #2 & 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><strong>Name:</strong> Airll H. Sanchez</p>
+<p><strong>Date:</strong> September 17, 2025</p>
+<section id="laboratory-task-2-3">
+<h1>Laboratory Task #2 &amp; 3<a class="headerlink" href="#laboratory-task-2-3" title="Link to this heading">#</a></h1>
+<p><img alt="Laboratory2" src="_images/Laboratory2.png" /></p>
+<p><img alt="Laboratory3" src="_images/Laboratory3.png" /></p>
+<ol class="arabic simple">
+<li><p>Introduction and Objectives</p></li>
+</ol>
+<p>This notebook implements a basic two-layer neural network (one hidden layer) to demonstrate the Forward and Backward Propagation processes.</p>
+<p>The primary objective is to replicate and analyze a specific case where the Rectified Linear Unit (ReLU) activation function leads to the “Dying ReLU” problem by observing which weights receive a zero gradient and thus remain stagnant.</p>
+<p>Network Architecture:</p>
+<p>Input Layer (L
+0
+​
+): 2 units</p>
+<p>Hidden Layer (L
+1
+​
+): 2 units with ReLU activation</p>
+<p>Output Layer (L
+2
+​
+): 1 unit with Sigmoid activation</p>
+<p><strong>Imports and Setup</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1">#Efficiently handle vector/matrix operations </span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>  <span class="c1">#for creating static, interactive, and animated visualizations</span>
+<span class="c1">#Define the global learning (alpha)</span>
+<span class="n">LEARNING_RATE</span> <span class="o">=</span> <span class="mf">0.01</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Defining Activation Functions</strong></p>
+<p>Backpropagation requires the derivative of the activation functions used in the network. The ReLU derivative is central to analyzing the “Dying ReLU” phenomenon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Actication Functions and Derivatives</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">relu</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ReLU activation function: A = max(0, z)</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        z (np.array): The weighted input (Z) for the layer.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        np.array: The activated output A.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Core ReLU calculation: returns Z for Z &gt; 0, and 0 for Z &lt;= 0.</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">relu_derivative</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Derivative of ReLU: g&#39;(Z) = 1 if z &gt; 0, 0 otherwise.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        z (np.array): The weighted input (Z).</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        np.array: The derivative g&#39;(Z).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># This function is critical for the &quot;Dying ReLU&quot; analysis: </span>
+    <span class="c1"># If z &lt;= 0, the derivative is 0, halting the gradient flow.</span>
+    <span class="n">dz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">z</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dz</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sigmoid</span><span class="p">(</span><span class="n">Z</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sigmoid activation function: g(Z) = 1 / (1 + exp(-Z))</span>
+<span class="sd">    Used in the final layer for output probability.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">Z</span><span class="p">))</span>
+
+<span class="c1"># NOTE: For backpropagation, we often use the derivative in terms of the activation A</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sigmoid_derivative</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Derivative of Sigmoid in terms of its output A: g&#39;(Z) = A * (1 - A).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">A</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Data Setup and Forward Propagation</strong></p>
+<p>We initialize weights and biases specifically to ensure the first hidden unit receives a negative input Z
+1
+[0]
+​
+=−0.7, forcing it into the “dead” state.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CORRECTED CODE CELL 3: Data Setup and Parameter Initialization</span>
+
+<span class="c1">#  1. Data Setup </span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span> <span class="c1"># Input data (1 sample, 3 features)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">]])</span>             <span class="c1"># Target output</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                  <span class="c1"># Number of training examples (m=1 here)</span>
+
+<span class="c1">#  2. Parameter Initialization (Hard-coded for Dying ReLU case) </span>
+
+<span class="c1"># Layer 1 (Hidden Layer: 3 inputs -&gt; 2 units)</span>
+<span class="c1"># W1 MUST be of shape (3, 2) to handle the 3 input features.</span>
+<span class="c1"># We must adjust W1 to still ensure Z1[0] = -0.7 (DEAD) and Z1[1] = 0.5 (LIVE)</span>
+<span class="n">W1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>    <span class="c1"># Weights from X[0]</span>
+               <span class="p">[</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>    <span class="c1"># Weights from X[1]</span>
+               <span class="p">[</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>   <span class="c1"># Weights from X[2]</span>
+<span class="c1"># Verification of Z1 calculation:</span>
+<span class="c1"># Z1[0] = (1.0 * -0.7) + (0.0 * 0.0) + (1.0 * 0.0) = -0.7 (DEAD)</span>
+<span class="c1"># Z1[1] = (1.0 * 0.5) + (0.0 * 0.0) + (1.0 * 0.0) = 0.5 (LIVE)</span>
+
+<span class="n">b1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>           <span class="c1"># b1: (1, 2)</span>
+
+<span class="c1"># Layer 2 (Output Layer: 2 inputs -&gt; 1 unit)</span>
+<span class="c1"># W2 shape remains (2, 1) as the hidden layer size is still 2.</span>
+<span class="n">W2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">],</span> 
+               <span class="p">[</span><span class="mf">0.9</span><span class="p">]])</span>          <span class="c1"># W2: (2, 1)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>           <span class="c1"># b2: (1, 1)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial Weights W1 (Hidden Layer, Shape </span><span class="si">{</span><span class="n">W1</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">):</span><span class="se">\n</span><span class="si">{</span><span class="n">W1</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial Weights W2 (Output Layer, Shape </span><span class="si">{</span><span class="n">W2</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">):</span><span class="se">\n</span><span class="si">{</span><span class="n">W2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial Weights W1 (Hidden Layer, Shape (3, 2)):
+[[-0.7  0.5]
+ [ 0.   0. ]
+ [ 0.   0. ]]
+
+Initial Weights W2 (Output Layer, Shape (2, 1)):
+[[0.1]
+ [0.9]]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Forward Propagation</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">forward_pass</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">W2</span><span class="p">,</span> <span class="n">b2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Performs the full forward pass: L0 -&gt; L1 (ReLU) -&gt; L2 (Sigmoid).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># 1. Hidden Layer (L1)</span>
+    <span class="n">Z1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b1</span> <span class="c1"># Z1 = X * W1 + b1</span>
+    <span class="n">A1</span> <span class="o">=</span> <span class="n">relu</span><span class="p">(</span><span class="n">Z1</span><span class="p">)</span>           <span class="c1"># A1 = ReLU(Z1)</span>
+    
+    <span class="c1"># 2. Output Layer (L2)</span>
+    <span class="n">Z2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="n">W2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span> <span class="c1"># Z2 = A1 * W2 + b2</span>
+    <span class="n">A2</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">Z2</span><span class="p">)</span>         <span class="c1"># A2 = Sigmoid(Z2) (Y_hat)</span>
+    
+    <span class="c1"># Cache stores intermediate results</span>
+    <span class="n">cache</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z1</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="n">A2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">A2</span><span class="p">,</span> <span class="n">cache</span>
+
+<span class="c1"># Execute the forward pass</span>
+<span class="n">Y_hat</span><span class="p">,</span> <span class="n">cache</span> <span class="o">=</span> <span class="n">forward_pass</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W1</span><span class="p">,</span> <span class="n">b1</span><span class="p">,</span> <span class="n">W2</span><span class="p">,</span> <span class="n">b2</span><span class="p">)</span>
+<span class="n">Z1</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="n">A2</span> <span class="o">=</span> <span class="n">cache</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;FORWARD PASS RESULTS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hidden Layer Weighted Input Z1:</span><span class="se">\n</span><span class="si">{</span><span class="n">Z1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hidden Layer Activation A1:</span><span class="se">\n</span><span class="si">{</span><span class="n">A1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Predicted Output A2 (Y_hat): </span><span class="si">{</span><span class="n">Y_hat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FORWARD PASS RESULTS
+Hidden Layer Weighted Input Z1:
+[[-0.7  0.5]]
+Hidden Layer Activation A1:
+[[0.  0.5]]
+Predicted Output A2 (Y_hat): [[0.61063923]]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Backpropagation and Dying ReLU Analysis</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Backpropagation</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">backpropagation</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_hat</span><span class="p">,</span> <span class="n">W2</span><span class="p">,</span> <span class="n">cache</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes the gradients (dW, db) needed for weight updates using </span>
+<span class="sd">    the chain rule.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Z1</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="n">A2</span> <span class="o">=</span> <span class="n">cache</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># --- Output Layer (L2) Gradients ---</span>
+    <span class="c1"># dZ2 is the gradient of the loss w.r.t Z2 (simplified for Sigmoid/Cross-Entropy)</span>
+    <span class="n">dZ2</span> <span class="o">=</span> <span class="n">Y_hat</span> <span class="o">-</span> <span class="n">Y</span> 
+    
+    <span class="c1"># dW2: gradient of Loss w.r.t W2</span>
+    <span class="n">dW2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dZ2</span><span class="p">)</span>
+    <span class="c1"># db2: gradient of Loss w.r.t b2</span>
+    <span class="n">db2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dZ2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># --- Hidden Layer (L1) Gradients ---</span>
+    <span class="c1"># 1. Backpropagate through W2 to get dA1</span>
+    <span class="n">dA1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dZ2</span><span class="p">,</span> <span class="n">W2</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> 
+    <span class="c1"># 2. Apply the ReLU derivative to get dZ1 (CRITICAL STEP)</span>
+    <span class="c1"># dZ1 = dA1 * g&#39;(Z1)</span>
+    <span class="n">dZ1</span> <span class="o">=</span> <span class="n">dA1</span> <span class="o">*</span> <span class="n">relu_derivative</span><span class="p">(</span><span class="n">Z1</span><span class="p">)</span> 
+
+    <span class="c1"># 3. Gradients for W1 and b1</span>
+    <span class="c1"># dW1: gradient of Loss w.r.t W1</span>
+    <span class="n">dW1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dZ1</span><span class="p">)</span>
+    <span class="c1"># db1: gradient of Loss w.r.t b1</span>
+    <span class="n">db1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dZ1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">gradients</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;dW1&quot;</span><span class="p">:</span> <span class="n">dW1</span><span class="p">,</span> <span class="s2">&quot;db1&quot;</span><span class="p">:</span> <span class="n">db1</span><span class="p">,</span> <span class="s2">&quot;dW2&quot;</span><span class="p">:</span> <span class="n">dW2</span><span class="p">,</span> <span class="s2">&quot;db2&quot;</span><span class="p">:</span> <span class="n">db2</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">gradients</span>
+
+<span class="c1"># Execute the backpropagation</span>
+<span class="n">gradients</span> <span class="o">=</span> <span class="n">backpropagation</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_hat</span><span class="p">,</span> <span class="n">W2</span><span class="p">,</span> <span class="n">cache</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;--- BACKWARD PASS GRADIENTS ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gradient dW1 (Weights for Hidden Layer):</span><span class="se">\n</span><span class="si">{</span><span class="n">gradients</span><span class="p">[</span><span class="s1">&#39;dW1&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- BACKWARD PASS GRADIENTS ---
+Gradient dW1 (Weights for Hidden Layer):
+[[ 0.         -0.35042469]
+ [ 0.          0.        ]
+ [ 0.         -0.35042469]]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Weight Update and Conclusion</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Weight Update</span>
+<span class="c1"># Unpack gradients</span>
+<span class="n">dW1</span><span class="p">,</span> <span class="n">db1</span> <span class="o">=</span> <span class="n">gradients</span><span class="p">[</span><span class="s1">&#39;dW1&#39;</span><span class="p">],</span> <span class="n">gradients</span><span class="p">[</span><span class="s1">&#39;db1&#39;</span><span class="p">]</span>
+<span class="n">dW2</span><span class="p">,</span> <span class="n">db2</span> <span class="o">=</span> <span class="n">gradients</span><span class="p">[</span><span class="s1">&#39;dW2&#39;</span><span class="p">],</span> <span class="n">gradients</span><span class="p">[</span><span class="s1">&#39;db2&#39;</span><span class="p">]</span>
+
+<span class="c1"># Store original weights for comparison</span>
+<span class="n">W1_old</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">W1</span><span class="p">)</span>
+
+<span class="c1"># Apply Gradient Descent: W = W - (learning_rate * dW)</span>
+<span class="n">W1</span> <span class="o">-=</span> <span class="n">LEARNING_RATE</span> <span class="o">*</span> <span class="n">dW1</span>
+<span class="n">b1</span> <span class="o">-=</span> <span class="n">LEARNING_RATE</span> <span class="o">*</span> <span class="n">db1</span>
+<span class="n">W2</span> <span class="o">-=</span> <span class="n">LEARNING_RATE</span> <span class="o">*</span> <span class="n">dW2</span>
+<span class="n">b2</span> <span class="o">-=</span> <span class="n">LEARNING_RATE</span> <span class="o">*</span> <span class="n">db2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Original W1 (Before Update):</span><span class="se">\n</span><span class="si">{</span><span class="n">W1_old</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">35</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Updated W1 (After Update):</span><span class="se">\n</span><span class="si">{</span><span class="n">W1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original W1 (Before Update):
+[[-0.7  0.5]
+ [ 0.   0. ]
+ [ 0.   0. ]]
+-----------------------------------
+Updated W1 (After Update):
+[[-0.7         0.50350425]
+ [ 0.          0.        ]
+ [ 0.          0.00350425]]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Analysis of the Dying ReLU Observation</strong></p>
+<p>The single step of backpropagation confirms the “Dying ReLU” problem:</p>
+<ol class="arabic simple">
+<li><p><strong>Dead Unit Confirmation:</strong> The weighted input for the first hidden unit, <span class="math notranslate nohighlight">\(Z_1^{[0]}\)</span>, was <strong><span class="math notranslate nohighlight">\(-0.7\)</span></strong> (negative), which caused its activation <span class="math notranslate nohighlight">\(A_1^{[0]}\)</span> to become <strong>0</strong> due to the ReLU function.</p></li>
+<li><p><strong>Gradient Vanishing:</strong> Since <span class="math notranslate nohighlight">\(Z_1^{[0]} \le 0\)</span>, the derivative of ReLU <span class="math notranslate nohighlight">\(g'(Z_1^{[0]})\)</span> is <strong>0</strong>. This results in the gradient for all weights feeding into this unit (the <strong>first column of <span class="math notranslate nohighlight">\(dW_1\)</span></strong>) being <strong>zero</strong>.</p></li>
+<li><p><strong>Weight Stagnation:</strong></p>
+<ul class="simple">
+<li><p>The updated weights <strong><span class="math notranslate nohighlight">\(W_1\)</span> (first column)</strong> are <strong>identical</strong> to the original weights <span class="math notranslate nohighlight">\(W_{1, old}\)</span>.</p></li>
+<li><p>The weights feeding the live unit (second column) <em>do</em> change.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Conclusion:</strong> The first hidden unit is “dead.” Since it receives no gradient, its weights will never be updated in this or subsequent steps, rendering it permanently inactive for this training data.</p>
+<p><strong>Visualizations</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate 100 points between -5 and 5</span>
+<span class="n">z_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="c1"># Calculate the derivative at each point</span>
+<span class="n">dz_values</span> <span class="o">=</span> <span class="n">relu_derivative</span><span class="p">(</span><span class="n">z_values</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">z_values</span><span class="p">,</span> <span class="n">dz_values</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;ReLU Derivative $g&#39;(Z)$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The Critical Role of the ReLU Derivative in Gradient Flow&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Weighted Input (Z)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Derivative Value $g</span><span class="se">\&#39;</span><span class="s1">(Z)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$Z = 0$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$g</span><span class="se">\&#39;</span><span class="s1">(Z) = 0$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/93f84dace15bb432438cf9807d14c763a766982b84b13522784c172beffeee7c.png" src="_images/93f84dace15bb432438cf9807d14c763a766982b84b13522784c172beffeee7c.png" />
+</div>
+</div>
+<p><strong>Interpretation: ReLU Derivative Plot</strong></p>
+<p>This plot visually confirms the mathematical foundation of the “Dying ReLU” problem:</p>
+<ol class="arabic simple">
+<li><p><strong>Positive Input (<span class="math notranslate nohighlight">\(Z &gt; 0\)</span>):</strong> The derivative <span class="math notranslate nohighlight">\(g'(Z)\)</span> is <strong>1</strong>. When the weighted input is positive, the gradient signal flows freely backward without being diminished, allowing the neuron to learn (e.g., the second hidden unit in this lab).</p></li>
+<li><p><strong>Negative Input (<span class="math notranslate nohighlight">\(Z \le 0\)</span>):</strong> The derivative <span class="math notranslate nohighlight">\(g'(Z)\)</span> is <strong>0</strong>. When the weighted input falls into this region (as <span class="math notranslate nohighlight">\(Z_1^{[0]} = -0.7\)</span> did), the multiplication by zero in the backpropagation step <span class="math notranslate nohighlight">\(\text{d}Z_1 = \text{d}A_1 \cdot g'(Z_1)\)</span> causes the entire incoming gradient to <strong>vanish</strong>. This provides the definitive visual proof for why the “dead” unit cannot learn.</p></li>
+</ol>
+<p><strong>KEY TAKEAWAYS</strong></p>
+<ol class="arabic simple">
+<li><p>The Critical Role of the ReLU Derivative</p></li>
+</ol>
+<p>Zero Gradient: Because the derivative of ReLU(Z) is 0 for all Z≤0, any neuron whose weighted input Z becomes negative will have its incoming gradient signal multiplied by zero during backpropagation.</p>
+<p>Permanent Stagnation: This multiplication by zero causes the gradient for all its incoming weights (dW) to also become zero. Consequently, the weights are never updated, and the neuron is effectively permanently deactivated or “dead.”</p>
+<ol class="arabic simple" start="2">
+<li><p>The Mechanics of Backpropagation
+This lab demonstrated how the chain rule propagates error:</p></li>
+</ol>
+<p>Forward vs. Backward: The forward pass uses inputs and weights to calculate the prediction (Y
+hat
+​
+); the backward pass uses the difference between Y
+hat
+​
+and the true label (Y) to calculate how much each weight contributed to the error.</p>
+<p>Weight Update Formula: The gradient calculation for any layer’s weights, W
+L
+​
+, depends on three things: the activation from the previous layer (A
+L−1
+​
+), the error signal (dZ
+L
+​
+), and the learning rate.</p>
+<ol class="arabic simple" start="3">
+<li><p>Proof of the Dying ReLU Phenomenon
+The specific setup of your lab provided empirical evidence for this problem:</p></li>
+</ol>
+<p>Empirical Proof: By setting W
+1
+​
+and X to force Z
+1
+[0]
+​
+=−0.7, the code demonstrated that the first column of the dW
+1
+​
+matrix was zero.</p>
+<p>Conclusion: This directly resulted in the first column of W
+1
+​
+remaining unchanged after the update step, proving that the neuron connected to that column was isolated from the learning process.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "sairria"
+        },
+        kernelOptions: {
+            name: "sairria",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'sairria'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Laboratories.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Laboratories</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Laboratory4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Laboratory Task # 4</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Airyll H. Sanchez
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
