@@ -49,15 +49,12 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-# CODE CELL 1: Imports and Architecture Constants
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
+import torch.optim as optim
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader
+import matplotlib.pyplot as plt
 
-# Define constants based on the standard input (e.g., MNIST)
-INPUT_CHANNELS = 1      # (1, 28, 28)
-INPUT_WIDTH = 28        # 28 pixels
-DROPOUT_PROB = 0.2      # p = 0.2
-FINAL_OUTPUT_CLASSES = 10 # Assuming 10 classes (like MNIST)
 -------------------
 
