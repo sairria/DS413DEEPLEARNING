@@ -198,10 +198,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../DLBlogPost.html">ℎ
-~
-𝑖</a></li>
-
 </ul>
 </details></li>
 </ul>
@@ -477,93 +473,6 @@ Final summary: Which combination performed best and why.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.layers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Dropout</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.optimizers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Adam</span><span class="p">,</span> <span class="n">SGD</span><span class="p">,</span> <span class="n">RMSprop</span><span class="p">,</span> <span class="n">Adagrad</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.layers</span><span class="w"> </span><span class="kn">import</span> <span class="n">LeakyReLU</span><span class="p">,</span> <span class="n">ELU</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.preprocessing.image</span><span class="w"> </span><span class="kn">import</span> <span class="n">ImageDataGenerator</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequential</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">sairria</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">tensorflow</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">468</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span>     <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;tf_keras.src.optimizers&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">467</span>   <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">468</span>     <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;keras.src.optimizers&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span> <span class="k">except</span> <span class="p">(</span><span class="ne">ImportError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span>   <span class="k">pass</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py:88,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>             <span class="k">break</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">---&gt; </span><span class="mi">88</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">sairria</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">keras</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;DO NOT EDIT.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> </span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> This file was autogenerated. Do not edit it by hand,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd"> since your modifications would be overwritten.</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">_tf_keras</span> <span class="k">as</span> <span class="n">_tf_keras</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">activations</span> <span class="k">as</span> <span class="n">activations</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">applications</span> <span class="k">as</span> <span class="n">applications</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">sairria</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">keras</span>\<span class="n">_tf_keras</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras._tf_keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">keras</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">sairria</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">keras</span>\<span class="n">_tf_keras</span>\<span class="n">keras</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;DO NOT EDIT.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> </span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> This file was autogenerated. Do not edit it by hand,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd"> since your modifications would be overwritten.</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">activations</span> <span class="k">as</span> <span class="n">activations</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">applications</span> <span class="k">as</span> <span class="n">applications</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">callbacks</span> <span class="k">as</span> <span class="n">callbacks</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">sairria</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">keras</span>\<span class="n">activations</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;DO NOT EDIT.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> </span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> This file was autogenerated. Do not edit it by hand,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span><span class="sd"> since your modifications would be overwritten.</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.activations</span><span class="w"> </span><span class="kn">import</span> <span class="n">deserialize</span> <span class="k">as</span> <span class="n">deserialize</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.activations</span><span class="w"> </span><span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">get</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.activations</span><span class="w"> </span><span class="kn">import</span> <span class="n">serialize</span> <span class="k">as</span> <span class="n">serialize</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">sairria</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">keras</span>\<span class="n">src</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src</span><span class="w"> </span><span class="kn">import</span> <span class="n">datasets</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src</span><span class="w"> </span><span class="kn">import</span> <span class="n">initializers</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src</span><span class="w"> </span><span class="kn">import</span> <span class="n">layers</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src</span><span class="w"> </span><span class="kn">import</span> <span class="n">ops</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">sairria</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">keras</span>\<span class="n">src</span>\<span class="n">layers</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">182</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.layers.preprocessing.text_vectorization</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextVectorization</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.layers.regularization.activity_regularization</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">180</span>     <span class="n">ActivityRegularization</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span> <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">182</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.layers.regularization.alpha_dropout</span><span class="w"> </span><span class="kn">import</span> <span class="n">AlphaDropout</span>
-<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.layers.regularization.dropout</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dropout</span>
-<span class="g g-Whitespace">    </span><span class="mi">184</span> <span class="kn">from</span><span class="w"> </span><span class="nn">keras.src.layers.regularization.gaussian_dropout</span><span class="w"> </span><span class="kn">import</span> <span class="n">GaussianDropout</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1360,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1331,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:935,</span> in <span class="ni">_load_unlocked</span><span class="nt">(spec)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1018,</span> in <span class="ni">exec_module</span><span class="nt">(self, module)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1114,</span> in <span class="ni">get_code</span><span class="nt">(self, fullname)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:1213,</span> in <span class="ni">get_data</span><span class="nt">(self, path)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

@@ -22,4 +22,4 @@ chapters:
       - file: markdown
       - file: markdown-notebooks
       - file: notebooks
-      - file: DLBlogPost
+      - file: DROPOUT_BLOGPOST
